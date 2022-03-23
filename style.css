@@ -88,6 +88,9 @@
   padding: 20px 20px 50px 20px;
 }
 
+.content p {
+  color:rgb(75, 75, 75);
+}
 .content .left {
   display: grid;
   grid-template-rows: 50px 1fr;
@@ -97,7 +100,7 @@
 
 .content .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, min-content);
   justify-items: left;
   gap: 40px;
 }
@@ -120,9 +123,49 @@
 .content .right {
   display: grid;
   grid-template-rows: 1fr 1fr;
+  gap: 25px;
 }
 
-.content .right div {
+.content .right .one {
+  display: grid;
+  grid-template-rows: 1fr 10px 1fr 10px 1fr;
+  row-gap: none;
+  align-items: center;
+}
+
+.line {
+  border-bottom: 1px solid black;
+}
+.content .right .one h3 {
+  font-size: 14px;
+}
+
+.content .right .one p {
+  font-size: 12px;
+}
+
+.content .right .two {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.content .right .two> div {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 10px;
+}
+
+.content .right .two p {
+  font-size: 12px;
+}
+
+.content .right .two .username {
+  font-weight: bold;
+  color: black;
+}
+
+
+.content .right>div {
   display: grid;
   grid-template-rows: 50px 1fr;
   row-gap: 5px;
