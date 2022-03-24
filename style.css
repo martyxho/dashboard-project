@@ -102,7 +102,7 @@
   height: 35px;
   border: none;
   border-radius: 25px;
-
+  font-weight: bold;
 }
 .sidebar {
   background: thistle;
