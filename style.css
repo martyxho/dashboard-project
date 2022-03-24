@@ -142,8 +142,8 @@
   background: gold;
   display: grid;
   grid-template-columns: 2.5fr 1fr;
-  padding: 20px 50px 40px 50px;
-  gap: 40px;
+  padding: 20px 50px 50px 50px;
+  gap: 25px;
 }
 
 .content p {
@@ -160,7 +160,7 @@
   display: grid;
   grid-template-columns: repeat(2, min-content);
   justify-items: left;
-  gap: 40px;
+  gap: 25px;
 }
 
 .content h1 {
