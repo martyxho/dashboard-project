@@ -1,3 +1,6 @@
+:root {
+  --boxshadow: 3px 3px 5px rgb(206, 201, 201);
+}
 * {
   margin: 0;
   padding: 0;
@@ -13,37 +16,78 @@
 }
 
 .header {
+  position: relative;
   background: oldlace;
   grid-column: 2 / 3;
   grid-row: 1;
   display: grid;
   grid-template-rows: 1fr 1fr;
   padding: 5px 50px;
+  box-shadow: var(--boxshadow);
+  gap: 10px;
 }
 
 .header .top {
   display: grid;
-  grid-template-columns: 1fr 50px 50px min-content;
-  align-content: center;
+  grid-template-columns: 1fr 50px 50px max-content;
   align-items: center;
+  justify-items: center;
+  gap: 5px;
 }
 
+.header .top p {
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.header .left img {
+  height: 70px;
+  border-radius: 50%;
+}
 .search {
   display: grid;
-  grid-template-columns: 50px 500px;
+  grid-template-columns: 50px 600px;
   align-items: center;
-  align-content: center;
+  justify-self: left;
+
+}
+
+.search input {
+  height: 30px;
+  border: none;
+  background: rgb(239 211 239);
+  border-radius: 25px;
+}
+
+.search img {
+  justify-self: center;
+}
+
+#profile {
+  height: 45px;
+  border-radius: 50%;
 }
 
 .header .bottom {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-bottom: 10px;
 }
 
 .header .bottom .left {
   display: grid;
-  grid-template-columns: 50px 1fr;
-  align-content: center;
+  grid-template-columns: min-content 1fr;
+  gap: 15px;
+  align-items: center;
+}
+
+.header .bottom .left p {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.header #name {
+  font-size: 20px;
 }
 
 .header .bottom .right {
@@ -64,19 +108,32 @@
   background: thistle;
   grid-row: 1 / 3;
   display: grid;
-  grid-template-rows: 100px 300px 1fr;
+  grid-template-rows: 115px 300px 1fr;
+  padding-left: 20px;
 }
 
+.sidebar p {
+  font-size: 18px;
+  font-weight: 550;
+}
 .sidebar .top, .sidebar .mid, .sidebar .bottom {
   display: grid;
   grid-template-columns: 50px 1fr;
   align-items: center;
   align-content: start;
   row-gap: 20px;
+  column-gap: 10px;
 }
 
 .sidebar .top {
   padding-top: 30px;
+}
+
+.sidebar .top p {
+  font-size: 25px;
+}
+.sidebar .top img{
+  height: 45px;
 }
 .sidebar img {
   justify-self: center;
@@ -85,7 +142,8 @@
   background: gold;
   display: grid;
   grid-template-columns: 2.5fr 1fr;
-  padding: 20px 20px 50px 20px;
+  padding: 20px 50px 40px 50px;
+  gap: 40px;
 }
 
 .content p {
@@ -107,8 +165,8 @@
 
 .content h1 {
   justify-self: left;
-  font-size: 25px;
-  font-weight: normal;
+  font-size: 20px;
+  font-weight: bold;
   align-self: center;
 }
 
@@ -118,8 +176,26 @@
   background: oldlace;
   border-radius: 15px;
   padding: 25px;
+  box-shadow: var(--boxshadow);
 }
 
+.content .left .card h2 {
+  font-size: 16px;
+}
+
+.content .left .card {
+  display: grid;
+  grid-template-rows: min-content min-content 1fr;
+  gap: 2px;
+}
+
+.content .left .buttons {
+  justify-self: right;
+  align-self: end;
+}
+.content .card p {
+  font-size: 14px;
+}
 .content .right {
   display: grid;
   grid-template-rows: 1fr 1fr;
